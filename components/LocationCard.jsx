@@ -4,13 +4,18 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import ActivityIcon from "./ActivityIcon";
 
-const LocationCard = () => {
+const LocationCard = (props) => {
+  const { location, activity } = props;
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate("Data");
+        navigation.navigate("Data", {
+          location: location,
+        });
       }}
+      className={activity === "coming soon" ? "opacity-60" : ""}
+      disabled={activity === "coming soon" ? true : false}
     >
       <LinearGradient
         className="w-full h-[70px] bg-gradient-to-r from-[#0e0e0e] to-dark4 my-3 rounded-lg flex-row items-center space-x-[10px]"
@@ -23,8 +28,8 @@ const LocationCard = () => {
           className="h-[60px] w-[60px] rounded-lg ml-[5px]"
         />
         <View className="space-y-[4px]">
-          <Text className="text-light text-xl">Stellenbosch</Text>
-          <ActivityIcon size="regular" level="fire" />
+          <Text className="text-light text-xl">{location}</Text>
+          <ActivityIcon size="regular" level={activity} />
         </View>
       </LinearGradient>
     </TouchableOpacity>

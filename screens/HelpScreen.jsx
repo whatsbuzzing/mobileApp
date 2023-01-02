@@ -45,25 +45,25 @@ const HelpScreen = () => {
         </View>
         <View className="space-y-[10px]">
           <View className="w-1/3">
-            <LengthIcon level="dead" />
+            <LengthIcon length="none" />
           </View>
           <Text className="text-dark2 text-xs ml-20">no line.</Text>
         </View>
         <View className="space-y-[10px]">
           <View className="w-1/3">
-            <LengthIcon level="chilled" />
+            <LengthIcon length="short" />
           </View>
           <Text className="text-dark2 text-xs ml-20">short line.</Text>
         </View>
         <View className="space-y-[10px]">
           <View className="w-1/3">
-            <LengthIcon level="buzzing" />
+            <LengthIcon length="medium" />
           </View>
           <Text className="text-dark2 text-xs ml-20">medium-ish line.</Text>
         </View>
         <View className="space-y-[10px]">
           <View className="w-1/3">
-            <LengthIcon level="fire" />
+            <LengthIcon length="long" />
           </View>
           <Text className="text-dark2 text-xs ml-20">
             long line. like very long. like why-did-I-come-out-this-late long

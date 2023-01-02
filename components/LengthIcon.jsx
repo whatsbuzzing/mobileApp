@@ -1,43 +1,43 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
 const LengthIcon = (props) => {
-  const { level, size } = props;
+  const { length, size } = props;
   const [startPos, setStartPos] = useState(0);
   const [endPos, setEndPos] = useState(0);
   useEffect(() => {
-    if (level === "dead") {
+    if (length === "none") {
       setStartPos(0);
       setEndPos(0);
-    } else if (level === "chilled") {
+    } else if (length === "short") {
       setStartPos(0);
       setEndPos(0.33);
-    } else if (level === "buzzing") {
+    } else if (length === "medium") {
       setStartPos(0.33);
       setEndPos(0.66);
     } else {
       setStartPos(0.66);
       setEndPos(0.99);
     }
-  }, [level]);
+  }, [length]);
   return (
     <View
       className={`rounded-full ${
-        level === "dead" ? "border-[1px] border-solid border-dark2" : ""
+        length === "none" ? "border-[1px] border-solid border-dark2" : ""
       } ${size === "small" ? "h-1" : "h-2"}`}
     >
       <LinearGradient
         className="h-full w-full rounded-full"
         colors={[
           `${
-            level === "dead"
+            length === "none"
               ? "transparent"
-              : level === "chilled"
+              : length === "short"
               ? "#12c2e9"
-              : level === "buzzing"
+              : length === "medium"
               ? "#c471ed"
-              : level === "fire"
+              : length === "long"
               ? "#f64f59"
               : ""
           }`,
