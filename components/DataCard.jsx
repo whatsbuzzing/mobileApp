@@ -4,7 +4,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import ActivityIcon from "./ActivityIcon";
 import LengthIcon from "./LengthIcon";
 
-const DataCard = () => {
+const DataCard = (props) => {
+  const { club, activity, line_length } = props;
   return (
     <View className="flex-row w-4/5 mx-auto space-x-[14px] my-3">
       <Image
@@ -18,17 +19,17 @@ const DataCard = () => {
         end={{ x: 0.5, y: 1 }}
       >
         <View className="flex-1 mx-2 my-1">
-          <Text className="text-light font-bold text-xl">De Lapa</Text>
+          <Text className="text-light font-bold text-xl">{club}</Text>
           <View className="flex-row">
             <Text className="flex-1 text-dark2 font-medium">Activity:</Text>
             <View className="flex-1">
-              <ActivityIcon size="small" level="fire" />
+              <ActivityIcon size="small" level={activity} />
             </View>
           </View>
           <View className="flex-row items-center">
             <Text className="flex-1 text-dark2 font-medium">Line:</Text>
             <View className="flex-1">
-              <LengthIcon level="fire" size="small" />
+              <LengthIcon length={line_length} size="small" />
             </View>
           </View>
         </View>

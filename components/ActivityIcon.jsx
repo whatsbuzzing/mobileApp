@@ -6,9 +6,7 @@ const ActivityIcon = (props) => {
   return (
     <View className="flex-row space-x-[4px] items-center">
       <View
-        className={` bg-firePink rounded-full ${
-          size === "small" ? "w-3 h-3" : "w-4 h-4"
-        } ${
+        className={`rounded-full ${size === "small" ? "w-3 h-3" : "w-4 h-4"} ${
           level === "fire"
             ? "bg-firePink"
             : level === "buzzing"
@@ -17,6 +15,8 @@ const ActivityIcon = (props) => {
             ? "bg-chilledBlue"
             : level === "dead"
             ? "bg-veryDark border-solid border-[1px] border-dark2"
+            : level === "coming soon"
+            ? "hidden"
             : ""
         }`}
       />
