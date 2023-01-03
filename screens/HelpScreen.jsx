@@ -61,7 +61,7 @@ const HelpScreen = () => {
           </View>
           <Text className="text-dark2 text-xs ml-20">medium-ish line.</Text>
         </View>
-        <View className="space-y-[10px]">
+        <View className="space-y-[10px] mb-10">
           <View className="w-1/3">
             <LengthIcon length="long" />
           </View>
