@@ -36,11 +36,10 @@ const LocationScreen = () => {
     async function loadResourcesAndDataAsync() {
       try {
         const imageAssets = cacheImages([
-          require("../assets/media/locations/cape-town.png"),
+          require("../assets/media/locations/capetown.png"),
           require("../assets/media/locations/durban.png"),
           require("../assets/media/locations/stellenbosch.png"),
-          require("../assets/media/locations/joburg.png"),
-          require("../assets/media/locations/stellenbosch.png"),
+          require("../assets/media/locations/johannesburg.png"),
           require("../assets/media/clubs/aandklas.webp"),
           require("../assets/media/clubs/de_lapa.png"),
           require("../assets/media/clubs/dorp.png"),

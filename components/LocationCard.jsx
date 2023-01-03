@@ -24,7 +24,15 @@ const LocationCard = (props) => {
         end={{ x: 1, y: 0.5 }}
       >
         <Image
-          source={require("../assets/media/locations/stellenbosch.png")}
+          source={
+            location === "Stellenbosch"
+              ? require(`../assets/media/locations/stellenbosch.png`)
+              : location === "Cape Town"
+              ? require(`../assets/media/locations/capetown.png`)
+              : location === "Durban"
+              ? require(`../assets/media/locations/durban.png`)
+              : require(`../assets/media/locations/johannesburg.png`)
+          }
           className="h-[60px] w-[60px] rounded-lg ml-[5px]"
         />
         <View className="space-y-[4px]">

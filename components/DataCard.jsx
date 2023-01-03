@@ -9,7 +9,15 @@ const DataCard = (props) => {
   return (
     <View className="flex-row w-4/5 mx-auto space-x-[14px] my-3">
       <Image
-        source={require("../assets/media/clubs/de_lapa.png")}
+        source={
+          club === "Fool's Gold"
+            ? require(`../assets/media/clubs/fools_gold.png`)
+            : club === "De Lapa"
+            ? require(`../assets/media/clubs/de_lapa.png`)
+            : club === "Dorp"
+            ? require(`../assets/media/clubs/dorp.png`)
+            : require(`../assets/media/clubs/centraal.webp`)
+        }
         className=" w-[67px] h-[75px] rounded-[10px]"
       />
       <LinearGradient
