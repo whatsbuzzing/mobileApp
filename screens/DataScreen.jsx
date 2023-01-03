@@ -4,9 +4,8 @@ import {
   Image,
   ScrollView,
   TouchableHighlight,
-  TouchableOpacity,
 } from "react-native";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import DataCard from "../components/DataCard";
 import { useNavigation } from "@react-navigation/native";
