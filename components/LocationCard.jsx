@@ -14,8 +14,12 @@ const LocationCard = (props) => {
           location: location,
         });
       }}
-      className={activity === "coming soon" ? "opacity-60" : ""}
-      disabled={activity === "coming soon" ? true : false}
+      className={
+        activity === "coming soon" || activity === "offline" ? "opacity-60" : ""
+      }
+      disabled={
+        activity === "coming soon" || activity === "offline" ? true : false
+      }
     >
       <LinearGradient
         className="w-full h-[70px] bg-gradient-to-r from-[#0e0e0e] to-dark4 my-3 rounded-lg flex-row items-center space-x-[10px]"
