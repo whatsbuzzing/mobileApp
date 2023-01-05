@@ -43,6 +43,12 @@ const DataScreen = ({ route }) => {
           source={require("../assets/media/locations/stellenbosch.png")}
           className="h-full w-full"
         />
+        <TouchableHighlight
+          onPress={() => navigation.goBack()}
+          className="absolute top-5 right-[5%]"
+        >
+          <Text className="text-light text-xs">back</Text>
+        </TouchableHighlight>
         <Text className="absolute text-light font-bold text-4xl h-1/3 left-3 bottom-5">
           {location}
         </Text>

@@ -1,10 +1,11 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableHighlight } from "react-native";
 import React, { useEffect, useState, useCallback } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LocationCard from "../components/LocationCard";
 import firestore from "@react-native-firebase/firestore";
 import { Asset } from "expo-asset";
 import * as SplashScreen from "expo-splash-screen";
+import { useNavigation } from "@react-navigation/native";
 
 function cacheImages(images) {
   return images.map((image) => {
@@ -21,6 +22,7 @@ SplashScreen.preventAutoHideAsync();
 const LocationScreen = () => {
   const [appIsReady, setAppIsReady] = useState(false);
   const [locations, setLocations] = useState([]);
+  const navigation = useNavigation();
 
   function onResult(QuerySnapshot) {
     setLocations(QuerySnapshot.docs.map((doc) => doc.data()));
@@ -75,9 +77,16 @@ const LocationScreen = () => {
   return (
     <SafeAreaView className="bg-veryDark flex-1" onLayout={onLayoutRootView}>
       <View className=" px-10">
-        <Text className="text-light font-semibold text-3xl my-5">
-          Where we heading?
-        </Text>
+        <View className="flex-row items-center justify-between w-full mx-auto my-5">
+          <Text className="text-light font-semibold text-3xl">Where to?</Text>
+          <TouchableHighlight
+            onPress={() => {
+              navigation.navigate("Help");
+            }}
+          >
+            <Text className="text-dark2 text-sm font-medium">Help</Text>
+          </TouchableHighlight>
+        </View>
         {locations.map((location, index) => (
           <LocationCard
             key={index}
