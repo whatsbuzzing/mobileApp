@@ -15,9 +15,7 @@ const ActivityIcon = (props) => {
             ? "bg-chilledBlue"
             : level === "dead"
             ? "bg-veryDark border-solid border-[1px] border-dark2"
-            : level === "coming soon"
-            ? "hidden"
-            : ""
+            : "hidden"
         }`}
       />
       <Text className="text-dark1 font-bold text-xs">{level}</Text>
