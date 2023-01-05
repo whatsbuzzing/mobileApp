@@ -40,7 +40,7 @@ const LocationScreen = () => {
           require("../assets/media/locations/durban.png"),
           require("../assets/media/locations/stellenbosch.png"),
           require("../assets/media/locations/johannesburg.png"),
-          require("../assets/media/clubs/aandklas.webp"),
+          require("../assets/media/clubs/centraal.webp"),
           require("../assets/media/clubs/de_lapa.png"),
           require("../assets/media/clubs/dorp.png"),
           require("../assets/media/clubs/fools_gold.png"),

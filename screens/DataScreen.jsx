@@ -52,10 +52,10 @@ const DataScreen = ({ route }) => {
           <Text className="text-dark1 text-base">Places</Text>
           <TouchableHighlight
             onPress={() => {
-              navigation.navigate("Help");
+              navigation.navigate("Key");
             }}
           >
-            <Text className="text-dark3 text-xs font-medium">Help</Text>
+            <Text className="text-dark3 text-xs font-medium">Key</Text>
           </TouchableHighlight>
         </View>
         <ScrollView>
