@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import LocationScreen from "./screens/LocationScreen";
 import DataScreen from "./screens/DataScreen";
 import KeyScreen from "./screens/KeyScreen";
+import HelpScreen from "./screens/HelpScreen";
 
 const StackNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -11,6 +12,11 @@ const StackNavigator = () => {
       <Stack.Screen
         name="Location"
         component={LocationScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Help"
+        component={HelpScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen
