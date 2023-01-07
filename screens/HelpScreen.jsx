@@ -16,25 +16,25 @@ const HelpScreen = () => {
         </TouchableHighlight>
       </View>
       <ScrollView className="w-[90%] mx-auto space-y-[36px] my-4">
-        <View className="space-y-[42px]">
-          <Text className="text-dark1 text-2xl">When are we online?</Text>
-          <Text className="text-dark1 text-sm text-justify">
-            monday to saturday. 6pm to 2am.
-          </Text>
-        </View>
-        <View className="space-y-[42px]">
+        <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">what is this???</Text>
           <Text className="text-dark1 text-sm text-justify">
-            What’s Buzzing is an app that provides real time data on clubs and
-            bars in and around Stellenbosch (and more towns in the near future).
-            We’ve all had those moments when we come to town and it’s just not
-            as lit as we expected it to be, or when we need to walk all the way
-            from centraal to fool’s and we get there and the line simply isn’t
-            worth it. now just check the app and you’ll know exactly what sort
-            of vibe town is giving off and what the lines are looking like.
+            we all know the feeling of being stuck in the line outside of
+            fool's, with the rest of our mates inside, wishing we'd just come 10
+            minutes earlier... what's buzzing allows you to see the vibe of
+            stellies (and more in the future) from your phone without having to
+            go to town yourself. we tell you exactly how long the lines are and
+            how full every club is so that you can make the right decisions -
+            all the time.
           </Text>
         </View>
-        <View className="space-y-[42px]">
+        <View className="space-y-[30px]">
+          <Text className="text-dark1 text-2xl">When are we online?</Text>
+          <Text className="text-dark1 text-sm text-justify">
+            monday night to saturday night. 6pm to 2am.
+          </Text>
+        </View>
+        {/* <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">support</Text>
           <View className="space-y-[16px]">
             <Text className="text-dark1 text-sm text-justify">
@@ -47,14 +47,14 @@ const HelpScreen = () => {
             </Text>
           </View>
         </View>
-        <View className="space-y-[42px]">
+        <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">contact</Text>
           <View className="space-y-[16px]">
             <Text className="text-dark1 text-sm text-justify">
               for any general contact needs you can email us at
             </Text>
           </View>
-        </View>
+        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
