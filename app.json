@@ -2,7 +2,7 @@
   "expo": {
     "name": "WhatsBuzzing",
     "slug": "WhatsBuzzing",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -16,12 +16,15 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.leejavaa.WhatsBuzzing",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#080808"
       },
       "package": "com.leejavaa.WhatsBuzzing",
       "googleServicesFile": "./google-services.json"
@@ -29,6 +32,21 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["@react-native-firebase/app"]
+    "plugins": [
+      "@react-native-firebase/app",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a0c3149e-4dbd-4451-9f2a-2664ce9ee55b"
+      }
+    }
   }
 }
