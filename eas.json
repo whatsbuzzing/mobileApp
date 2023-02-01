@@ -10,14 +10,27 @@
       },
       "ios": {
         "buildConfiguration": "Debug"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview"
     },
-    "production": {}
+    "production": {
+      "channel": "production"
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "leejohnson19@icloud.com",
+        "ascAppId": "1664748100",
+        "appleTeamId": "24M7FZ3329"
+      },
+      "android": {
+        "serviceAccountKeyPath" : "../../keys/pc-api-4741953861402187618-11-cc932cbf0942.json"
+      }
+    }
   }
 }

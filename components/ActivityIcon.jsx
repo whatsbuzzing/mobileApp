@@ -4,7 +4,7 @@ import React from "react";
 const ActivityIcon = (props) => {
   const { size, level } = props;
   return (
-    <View className="flex-row space-x-[4px] items-center">
+    <View className={`flex-row  items-center ${level !== 'closed' ? "space-x-[4px]" : ""}`}>
       <View
         className={`rounded-full ${size === "small" ? "w-3 h-3" : "w-4 h-4"} ${
           level === "fire"

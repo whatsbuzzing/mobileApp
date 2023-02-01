@@ -2,32 +2,36 @@
   "expo": {
     "name": "WhatsBuzzing",
     "slug": "WhatsBuzzing",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#080808"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/e0a775f1-16bb-4f76-a096-9d33b85baa99"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.leejavaa.WhatsBuzzing",
-      "googleServicesFile": "./GoogleService-Info.plist"
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "bundleIdentifier": "com.leejavaa.WhatsBuzzingApp",
+      "buildNumber" : "2"
     },
     "android": {
-      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#080808"
       },
+      "googleServicesFile": "./google-services.json",
       "package": "com.leejavaa.WhatsBuzzing",
-      "googleServicesFile": "./google-services.json"
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -45,8 +49,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "a0c3149e-4dbd-4451-9f2a-2664ce9ee55b"
+        "projectId": "e0a775f1-16bb-4f76-a096-9d33b85baa99"
       }
-    }
+    },
+    "runtimeVersion": "1.0.0"
   }
 }

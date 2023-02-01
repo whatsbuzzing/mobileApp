@@ -15,7 +15,8 @@ const HelpScreen = () => {
           <Text className="text-dark2 text-xs">back</Text>
         </TouchableHighlight>
       </View>
-      <ScrollView className="w-[90%] mx-auto space-y-[36px] my-4">
+      <ScrollView className="w-[90%] mx-auto space-y-[36px] my-4"
+      showsVerticalScrollIndicator={false}>
         <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">what is this???</Text>
           <Text className="text-dark1 text-sm text-justify">
@@ -31,30 +32,31 @@ const HelpScreen = () => {
         <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">When are we online?</Text>
           <Text className="text-dark1 text-sm text-justify">
-            monday night to saturday night. 6pm to 2am.
+            Although we have not officially launched yet, we plan to be online monday night to saturday night, 6pm to 2am.
           </Text>
         </View>
-        {/* <View className="space-y-[30px]">
-          <Text className="text-dark1 text-2xl">support</Text>
+        <View className="space-y-[30px]">
+          <Text className="text-dark1 text-2xl">contact and support</Text>
           <View className="space-y-[16px]">
             <Text className="text-dark1 text-sm text-justify">
-              for any customer support you can email us, whatsapp us, or send us
-              a dm on instagram and we’ll get back to you within minutes (try
-              us).
+            there are three methods that you can use to get into contact with us. you can either email us at our support or information desks, or get in touch with us over on instagram:
             </Text>
+            <View className="space-y-[4px]">
+            <Text className="text-dark1 text-sm text-justify font-bold">
+            support@whatsbuzzing.app
+            </Text>
+            <Text className="text-dark1 text-sm text-justify font-bold">
+            info@whatsbuzzing.app
+            </Text>
+            <Text className="text-dark1 text-sm text-justify font-bold">
+            instagram.com/whatsbuzzingapp
+            </Text>
+            </View>
             <Text className="text-dark1 text-sm text-justify">
-              blah blah blah
+            we highly suggest you follow us on instagram, where we offer live support and keep you updated with any changes to the app. we'll also do some cool stuff with rewards and show you live updates from the streets of stellies (and more soon).
             </Text>
           </View>
         </View>
-        <View className="space-y-[30px]">
-          <Text className="text-dark1 text-2xl">contact</Text>
-          <View className="space-y-[16px]">
-            <Text className="text-dark1 text-sm text-justify">
-              for any general contact needs you can email us at
-            </Text>
-          </View>
-        </View> */}
       </ScrollView>
     </SafeAreaView>
   );
