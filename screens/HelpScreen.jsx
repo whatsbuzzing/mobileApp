@@ -18,21 +18,19 @@ const HelpScreen = () => {
       <ScrollView className="w-[90%] mx-auto space-y-[36px] my-4"
       showsVerticalScrollIndicator={false}>
         <View className="space-y-[30px]">
-          <Text className="text-dark1 text-2xl">what is this???</Text>
+          <Text className="text-dark1 text-2xl">what is this?</Text>
           <Text className="text-dark1 text-sm text-justify">
-            we all know the feeling of being stuck in the line outside of
-            fool's, with the rest of our mates inside, wishing we'd just come 10
-            minutes earlier... what's buzzing allows you to see the vibe of
-            stellies (and more in the future) from your phone without having to
-            go to town yourself. we tell you exactly how long the lines are and
+            whatsbuzzing allows you to see the vibe of
+            stellies from your phone without having to
+            go to town to check for yourself. we tell you exactly how long the lines are and
             how full every club is so that you can make the right decisions -
             all the time.
           </Text>
         </View>
         <View className="space-y-[30px]">
-          <Text className="text-dark1 text-2xl">When are we online?</Text>
+          <Text className="text-dark1 text-2xl">when are we online?</Text>
           <Text className="text-dark1 text-sm text-justify">
-            Although we have not officially launched yet, we plan to be online monday night to saturday night, 6pm to 2am.
+            although we have not officially launched yet, we plan to be online monday night to saturday night, 6pm to 2am.
           </Text>
         </View>
         <View className="space-y-[30px]">
