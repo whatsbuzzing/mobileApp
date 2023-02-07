@@ -46,6 +46,7 @@ const LocationScreen = () => {
           require("../assets/media/clubs/de_lapa.png"),
           require("../assets/media/clubs/dorp.png"),
           require("../assets/media/clubs/fools_gold.png"),
+          require("../assets/media/clubs/mystics.png"),
         ]);
 
         await Promise.all([...imageAssets]);
@@ -87,6 +88,14 @@ const LocationScreen = () => {
             <Text className="text-dark2 text-sm font-medium">Help</Text>
           </TouchableHighlight>
         </View>
+        {
+          locations.map((location, index) =>
+            (location.Location === "Stellenbosch" && location.Activity === "offline" &&
+              (<View key={index}>
+                <Text className="text-firePink font-semibold my-3">{location.Location} is currently offline. Live updates are only available between the hours of 6pm and 2am from Monday to Saturday.</Text>
+              </View>)
+            ))
+        }
         {locations.map((location, index) => (
           <LocationCard
             key={index}

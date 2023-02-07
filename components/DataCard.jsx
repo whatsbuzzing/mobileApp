@@ -16,6 +16,8 @@ const DataCard = (props) => {
             ? require(`../assets/media/clubs/de_lapa.png`)
             : club === "Dorp"
             ? require(`../assets/media/clubs/dorp.png`)
+            : club === "Die Mystic Boer"
+            ? require(`../assets/media/clubs/mystics.png`)
             : require(`../assets/media/clubs/centraal.webp`)
         }
         className=" w-[67px] h-[75px] rounded-[10px]"
