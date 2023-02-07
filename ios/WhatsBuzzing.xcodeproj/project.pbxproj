@@ -11,11 +11,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		41133117FCF74393A1DFB39C /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5764F3E91BDC460C92C59D0C /* noop-file.swift */; };
-		4EB1ED0B1D674A74A8D0C761 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CC3810AE7CD415CAB36C9DA /* GoogleService-Info.plist */; };
-		995B60B4529C08D0321E19F1 /* Pods_WhatsBuzzing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4869BD9557E0362A8D7F30 /* Pods_WhatsBuzzing.framework */; };
+		5038F41A01563EBD33F2EF69 /* Pods_WhatsBuzzing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CC7FDB051E6201EB15D0D7 /* Pods_WhatsBuzzing.framework */; };
+		8072D0CE7E9043518C5E6794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E29211358803485E8679C0AC /* GoogleService-Info.plist */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		EE043D20AC8143D2ACA76C17 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955054AA6C4649729FAB5561 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +26,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WhatsBuzzing/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = WhatsBuzzing/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = WhatsBuzzing/main.m; sourceTree = "<group>"; };
-		2CC3810AE7CD415CAB36C9DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "WhatsBuzzing/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5764F3E91BDC460C92C59D0C /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "WhatsBuzzing/noop-file.swift"; sourceTree = "<group>"; };
+		28CC7FDB051E6201EB15D0D7 /* Pods_WhatsBuzzing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsBuzzing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-WhatsBuzzing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsBuzzing.debug.xcconfig"; path = "Target Support Files/Pods-WhatsBuzzing/Pods-WhatsBuzzing.debug.xcconfig"; sourceTree = "<group>"; };
-		6D4869BD9557E0362A8D7F30 /* Pods_WhatsBuzzing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsBuzzing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4D352CD337FB3A3BF06240 /* Pods-WhatsBuzzing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsBuzzing.release.xcconfig"; path = "Target Support Files/Pods-WhatsBuzzing/Pods-WhatsBuzzing.release.xcconfig"; sourceTree = "<group>"; };
+		955054AA6C4649729FAB5561 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "WhatsBuzzing/noop-file.swift"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = WhatsBuzzing/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		E29211358803485E8679C0AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "WhatsBuzzing/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-WhatsBuzzing/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995B60B4529C08D0321E19F1 /* Pods_WhatsBuzzing.framework in Frameworks */,
+				5038F41A01563EBD33F2EF69 /* Pods_WhatsBuzzing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +60,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				2CC3810AE7CD415CAB36C9DA /* GoogleService-Info.plist */,
-				5764F3E91BDC460C92C59D0C /* noop-file.swift */,
+				E29211358803485E8679C0AC /* GoogleService-Info.plist */,
+				955054AA6C4649729FAB5561 /* noop-file.swift */,
 			);
 			name = WhatsBuzzing;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6D4869BD9557E0362A8D7F30 /* Pods_WhatsBuzzing.framework */,
+				28CC7FDB051E6201EB15D0D7 /* Pods_WhatsBuzzing.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				FC59633BBB8344BD80A0718E /* [CP-User] [RNFB] Core Configuration */,
+				BA89CA2960148431F90CD992 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -203,7 +203,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				4EB1ED0B1D674A74A8D0C761 /* GoogleService-Info.plist in Resources */,
+				8072D0CE7E9043518C5E6794 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsBuzzing/Pods-WhatsBuzzing-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC59633BBB8344BD80A0718E /* [CP-User] [RNFB] Core Configuration */ = {
+		BA89CA2960148431F90CD992 /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,7 +316,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				41133117FCF74393A1DFB39C /* noop-file.swift in Sources */,
+				EE043D20AC8143D2ACA76C17 /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
