@@ -87,6 +87,11 @@ const LocationScreen = () => {
             <Text className="text-dark2 text-sm font-medium">Help</Text>
           </TouchableHighlight>
         </View>
+        { (locations[1].Activity === "offline") &&
+          <View className="my-2">
+            <Text className="text-firePink font-semibold">We are currently offline. Updates are only live between the hours of 6pm and 2am from Monday to Saturday.</Text>
+          </View> 
+        }
         {locations.map((location, index) => (
           <LocationCard
             key={index}
