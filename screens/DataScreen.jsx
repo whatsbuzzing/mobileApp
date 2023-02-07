@@ -64,7 +64,7 @@ const DataScreen = ({ route }) => {
             <Text className="text-dark3 text-xs font-medium">Key</Text>
           </TouchableHighlight>
         </View>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           {clubs.map((club, index) => (
             <DataCard
               key={index}

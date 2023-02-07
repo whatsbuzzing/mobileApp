@@ -46,6 +46,7 @@ const LocationScreen = () => {
           require("../assets/media/clubs/de_lapa.png"),
           require("../assets/media/clubs/dorp.png"),
           require("../assets/media/clubs/fools_gold.png"),
+          require("../assets/media/clubs/mystics.png"),
         ]);
 
         await Promise.all([...imageAssets]);
