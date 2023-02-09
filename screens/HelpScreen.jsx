@@ -30,7 +30,7 @@ const HelpScreen = () => {
         <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">when are we online?</Text>
           <Text className="text-dark1 text-sm text-justify">
-            although we have not officially launched yet, we plan to be online monday night to saturday night, 6pm to 2am.
+            although we have not officially launched yet, we plan to be online monday night to saturday night, from 19:00 to 00:30.
           </Text>
         </View>
         <View className="space-y-[30px]">

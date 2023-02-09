@@ -2,7 +2,7 @@
   "expo": {
     "name": "WhatsBuzzing",
     "slug": "WhatsBuzzing",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
@@ -22,7 +22,7 @@
       "supportsTablet": true,
       "googleServicesFile": "./GoogleService-Info.plist",
       "bundleIdentifier": "com.leejavaa.WhatsBuzzingApp",
-      "buildNumber" : "2"
+      "buildNumber" : "3"
     },
     "android": {
       "adaptiveIcon": {
@@ -31,7 +31,7 @@
       },
       "googleServicesFile": "./google-services.json",
       "package": "com.leejavaa.WhatsBuzzing",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png"

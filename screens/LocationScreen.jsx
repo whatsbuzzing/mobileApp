@@ -92,7 +92,7 @@ const LocationScreen = () => {
           locations.map((location, index) =>
             (location.Location === "Stellenbosch" && location.Activity === "offline" &&
               (<View key={index}>
-                <Text className="text-firePink font-semibold my-3">{location.Location} is currently offline. Live updates are only available between the hours of 6pm and 2am from Monday to Saturday.</Text>
+                <Text className="text-firePink font-semibold my-3">{location.Location} is currently offline. Live updates are only available between the hours of 19:00 and 00:30 from Monday to Saturday.</Text>
               </View>)
             ))
         }

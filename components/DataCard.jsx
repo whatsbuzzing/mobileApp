@@ -5,7 +5,7 @@ import ActivityIcon from "./ActivityIcon";
 import LengthIcon from "./LengthIcon";
 
 const DataCard = (props) => {
-  const { club, activity, line_length } = props;
+  const { club, activity, line_length, location_activity } = props;
   return (
     <View className="flex-row w-4/5 mx-auto space-x-[14px] my-3">
       <Image
@@ -28,20 +28,34 @@ const DataCard = (props) => {
         start={{ x: 0.5, y: 0 }}
         end={{ x: 0.5, y: 1 }}
       >
-        <View className="flex-1 mx-2 my-1">
-          <Text className="text-light font-bold text-xl">{club}</Text>
-          <View className="flex-row">
-            <Text className="flex-1 text-dark2 font-medium">Activity:</Text>
-            <View className="flex-1">
-              <ActivityIcon size="small" level={activity} />
-            </View>
-          </View>
-          <View className="flex-row items-center">
-            <Text className="flex-1 text-dark2 font-medium">Line:</Text>
-            <View className="flex-1">
-              <LengthIcon length={line_length} size="small" />
-            </View>
-          </View>
+        <View className="flex-1 mx-2 my-1 justify-center">
+          {
+            location_activity !== "offline" && (
+              <>
+                <Text className="text-light font-bold text-xl">{club}</Text>
+                <View className="flex-row">
+                  <Text className="flex-1 text-dark1 font-medium">Activity:</Text>
+                  <View className="flex-1">
+                  <ActivityIcon size="small" level={activity} />
+                  </View>
+                </View>
+                <View className="flex-row items-center">
+                  <Text className="flex-1 text-dark1 font-medium">Line:</Text>
+                  <View className="flex-1">
+                    <LengthIcon length={line_length} size="small" />
+                  </View>
+                </View>
+              </>
+            )
+          }
+          {
+            location_activity === "offline" && (
+              <>
+                <Text className="text-light font-bold text-xl">{club}</Text>
+                <Text className=" text-dark1 font-medium">offline</Text>
+              </>
+            )
+          }
         </View>
       </LinearGradient>
     </View>

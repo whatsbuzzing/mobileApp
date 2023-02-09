@@ -61,12 +61,18 @@ const KeyScreen = () => {
           </View>
           <Text className="text-dark2 text-xs ml-20">medium-ish line.</Text>
         </View>
-        <View className="space-y-[10px] mb-10">
+        <View className="space-y-[10px]">
           <View className="w-1/3">
             <LengthIcon length="long" />
           </View>
           <Text className="text-dark2 text-xs ml-20">
             long line. like very long. like why-did-I-come-out-this-late long
+          </Text>
+        </View>
+        <View className="space-y-[10px] mb-10">
+          <Text className=" text-dark1 font-medium">offline</Text>
+          <Text className="text-dark2 text-xs ml-20">
+            we're currently offline and no live data is being updated. come back between our operating hours :)
           </Text>
         </View>
       </ScrollView>

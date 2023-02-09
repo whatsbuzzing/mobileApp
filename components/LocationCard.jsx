@@ -12,13 +12,14 @@ const LocationCard = (props) => {
       onPress={() => {
         navigation.navigate("Data", {
           location: location,
+          locationActivity: activity,
         });
       }}
       className={
-        activity === "coming soon" || activity === "offline" ? "opacity-60" : ""
+        activity === "coming soon" ? "opacity-60" : ""
       }
       disabled={
-        activity === "coming soon" || activity === "offline" ? true : false
+        activity === "coming soon" ? true : false
       }
     >
       <LinearGradient

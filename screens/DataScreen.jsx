@@ -13,7 +13,7 @@ import firestore from "@react-native-firebase/firestore";
 
 const DataScreen = ({ route }) => {
   const navigation = useNavigation();
-  const { location } = route.params;
+  const { location, locationActivity } = route.params;
   let locationId = "";
   if (location === "Stellenbosch") {
     locationId = "RLXjwXjhCjU60xmGRvxS";
@@ -61,7 +61,7 @@ const DataScreen = ({ route }) => {
               navigation.navigate("Key");
             }}
           >
-            <Text className="text-dark3 text-xs font-medium">Key</Text>
+            <Text className="text-light text-xs font-medium">Key</Text>
           </TouchableHighlight>
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -71,6 +71,7 @@ const DataScreen = ({ route }) => {
               club={club.Club}
               activity={club.Activity}
               line_length={club.Line_length}
+              location_activity={locationActivity}
             />
           ))}
         </ScrollView>
