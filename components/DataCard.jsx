@@ -1,11 +1,10 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import ActivityIcon from "./ActivityIcon";
 import LengthIcon from "./LengthIcon";
 
 const DataCard = (props) => {
-  const { club, activity, line_length, location_activity } = props;
+  const { club, activity, line_length, state, testing } = props;
   return (
     <View className="flex-row w-4/5 mx-auto space-x-[14px] my-3">
       <Image
@@ -20,7 +19,9 @@ const DataCard = (props) => {
             ? require(`../assets/media/clubs/mystics.png`)
             : require(`../assets/media/clubs/centraal.webp`)
         }
-        className=" w-[67px] h-[75px] rounded-[10px]"
+        // Development: Turn off in production
+        // className={` w-[70px] rounded-[10px] ${(state !== "offline" || testing === true ) ? "h-[97px]" : "h-[75px]"}`}
+        className={` w-[70px] rounded-[10px] ${state !== "offline" ? "h-[97px]" : "h-[75px]"}`}
       />
       <LinearGradient
         className="flex-1 rounded-[10px]"
@@ -29,27 +30,77 @@ const DataCard = (props) => {
         end={{ x: 0.5, y: 1 }}
       >
         <View className="flex-1 mx-2 my-1 justify-center">
-          {
-            location_activity !== "offline" && (
+          {/* Development: Turn off in production */}
+          {/* {
+            (state !== "offline" || testing===true ) && (
               <>
                 <Text className="text-light font-bold text-xl">{club}</Text>
-                <View className="flex-row">
-                  <Text className="flex-1 text-dark1 font-medium">Activity:</Text>
-                  <View className="flex-1">
-                  <ActivityIcon size="small" level={activity} />
-                  </View>
-                </View>
-                <View className="flex-row items-center">
-                  <Text className="flex-1 text-dark1 font-medium">Line:</Text>
-                  <View className="flex-1">
-                    <LengthIcon length={line_length} size="small" />
-                  </View>
-                </View>
+                {
+                  activity === "closed" && (
+                    <Text className="text-dark1 font-bold">Closed</Text>
+                  )
+                }
+                {
+                  activity !== "closed" && (
+                    <>
+                      <View className="py-1">
+                        <Text className="flex-1 text-dark1 font-medium">Fullness:</Text>
+                        <View className="flex-1 pt-0.5">
+                          <LengthIcon length={activity} size="small" />
+                        </View>
+                      </View>
+                      <View className="py-1">
+                        <Text className="flex-1 text-dark1 font-medium">Line length:</Text>
+                        <View className="flex-1 pt-0.5">
+                          <LengthIcon length={line_length} size="small" />
+                        </View>
+                      </View>
+                    </>
+                  )
+                }
               </>
             )
           }
           {
-            location_activity === "offline" && (
+            state === "offline" && testing===false && (
+              <>
+                <Text className="text-light font-bold text-xl">{club}</Text>
+                <Text className=" text-dark1 font-medium">offline</Text>
+              </>
+            )
+          } */}
+          {
+            state !== "offline" && (
+              <>
+                <Text className="text-light font-bold text-xl">{club}</Text>
+                {
+                  activity === "closed" && (
+                    <Text className="text-dark1 font-bold">Closed</Text>
+                  )
+                }
+                {
+                  activity !== "closed" && (
+                    <>
+                      <View className="py-1">
+                        <Text className="flex-1 text-dark1 font-medium">Fullness:</Text>
+                        <View className="flex-1 pt-0.5">
+                          <LengthIcon length={activity} size="small" />
+                        </View>
+                      </View>
+                      <View className="py-1">
+                        <Text className="flex-1 text-dark1 font-medium">Line length:</Text>
+                        <View className="flex-1 pt-0.5">
+                          <LengthIcon length={line_length} size="small" />
+                        </View>
+                      </View>
+                    </>
+                  )
+                }
+              </>
+            )
+          }
+          {
+            state === "offline" && (
               <>
                 <Text className="text-light font-bold text-xl">{club}</Text>
                 <Text className=" text-dark1 font-medium">offline</Text>

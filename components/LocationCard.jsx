@@ -2,24 +2,25 @@ import { View, Text, Image, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import ActivityIcon from "./ActivityIcon";
+import StateIcon from "./StateIcon";
 
 const LocationCard = (props) => {
-  const { location, activity } = props;
+  const { location, state, testing } = props;
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       onPress={() => {
         navigation.navigate("Data", {
           location: location,
-          locationActivity: activity,
+          state: state,
+          testing: testing,
         });
       }}
       className={
-        activity === "coming soon" ? "opacity-60" : ""
+        state === "coming soon" ? "opacity-60" : ""
       }
       disabled={
-        activity === "coming soon" ? true : false
+        state === "coming soon" ? true : false
       }
     >
       <LinearGradient
@@ -42,7 +43,7 @@ const LocationCard = (props) => {
         />
         <View className="space-y-[4px]">
           <Text className="text-light text-xl">{location}</Text>
-          <ActivityIcon size="regular" level={activity} />
+          <StateIcon state={state} />
         </View>
       </LinearGradient>
     </TouchableOpacity>

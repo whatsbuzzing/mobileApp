@@ -13,7 +13,7 @@ import firestore from "@react-native-firebase/firestore";
 
 const DataScreen = ({ route }) => {
   const navigation = useNavigation();
-  const { location, locationActivity } = route.params;
+  const { location, state, testing } = route.params;
   let locationId = "";
   if (location === "Stellenbosch") {
     locationId = "RLXjwXjhCjU60xmGRvxS";
@@ -33,6 +33,7 @@ const DataScreen = ({ route }) => {
       .collection("Locations")
       .doc(locationId)
       .collection(`${location}_Clubs`)
+      .orderBy('ActivityVal', 'desc')
       .onSnapshot(onResult, onError);
   }, []);
 
@@ -49,21 +50,20 @@ const DataScreen = ({ route }) => {
         >
           <Text className="text-light text-xs">back</Text>
         </TouchableHighlight>
-        <Text className="absolute text-light font-bold text-4xl h-1/3 left-3 bottom-5">
+        <Text className="absolute text-light font-bold text-4xl h-1/3 left-3 bottom-2">
           {location}
         </Text>
       </View>
       <View className="flex-1 absolute bg-veryDark bottom-0 h-3/4 w-full rounded-t-[30px]">
         <View className="flex-row items-center justify-between w-4/5 mx-auto mt-4">
           <Text className="text-dark1 text-base">Places</Text>
-          <TouchableHighlight
-            onPress={() => {
-              navigation.navigate("Key");
-            }}
-          >
-            <Text className="text-light text-xs font-medium">Key</Text>
-          </TouchableHighlight>
         </View>
+        {/* Development: Turn off in production */}
+        {/* {
+          testing === true && (
+            <Text className="text-buzzingPurple font-semibold py-4 w-4/5 mx-auto flex-1">Currently Testing</Text>
+          )
+        } */}
         <ScrollView showsVerticalScrollIndicator={false}>
           {clubs.map((club, index) => (
             <DataCard
@@ -71,7 +71,8 @@ const DataScreen = ({ route }) => {
               club={club.Club}
               activity={club.Activity}
               line_length={club.Line_length}
-              location_activity={locationActivity}
+              state={state}
+              testing={testing}
             />
           ))}
         </ScrollView>
