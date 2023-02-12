@@ -33,7 +33,7 @@ const LocationScreen = () => {
   }
 
   useEffect(() => {
-    firestore().collection("Locations").onSnapshot(onResult, onError);
+    firestore().collection("Locations").orderBy('StateVal', 'desc').onSnapshot(onResult, onError);
 
     async function loadResourcesAndDataAsync() {
       try {
@@ -85,22 +85,32 @@ const LocationScreen = () => {
               navigation.navigate("Help");
             }}
           >
-            <Text className="text-dark2 text-sm font-medium">Help</Text>
+            <Text className="text-dark1 text-sm font-medium">Help</Text>
           </TouchableHighlight>
         </View>
         {
           locations.map((location, index) =>
-            (location.Location === "Stellenbosch" && location.Activity === "offline" &&
+            (location.Location === "Stellenbosch" && location.State === "offline" &&
               (<View key={index}>
                 <Text className="text-firePink font-semibold my-3">{location.Location} is currently offline. Live updates are only available between the hours of 19:00 and 00:30 from Monday to Saturday.</Text>
               </View>)
             ))
         }
+        {/* Development: Turn off in production */}
+        {/* {
+          locations.map((location, index) =>
+            (location.Location === "Stellenbosch" && location.Testing === true &&
+              (<View key={index}>
+                <Text className="text-buzzingPurple font-semibold my-3">{location.Location} is currently testing</Text>
+              </View>)
+            ))
+        } */}
         {locations.map((location, index) => (
           <LocationCard
             key={index}
             location={location.Location}
-            activity={location.Activity}
+            state={location.State}
+            testing={location.Testing}
           />
         ))}
       </View>

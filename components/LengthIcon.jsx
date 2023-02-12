@@ -1,26 +1,9 @@
 import { View } from "react-native";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
 const LengthIcon = (props) => {
   const { length, size } = props;
-  const [startPos, setStartPos] = useState(0);
-  const [endPos, setEndPos] = useState(0);
-  useEffect(() => {
-    if (length === "none") {
-      setStartPos(0);
-      setEndPos(0);
-    } else if (length === "short") {
-      setStartPos(0);
-      setEndPos(0.33);
-    } else if (length === "medium") {
-      setStartPos(0.33);
-      setEndPos(0.66);
-    } else {
-      setStartPos(0.66);
-      setEndPos(0.99);
-    }
-  }, [length]);
   return (
     <View
       className={`rounded-full ${
@@ -31,21 +14,30 @@ const LengthIcon = (props) => {
         className="h-full w-full rounded-full"
         colors={[
           `${
-            length === "none"
+            (length === "none" || length === "dead")
               ? "transparent"
-              : length === "short"
-              ? "#12c2e9"
-              : length === "medium"
-              ? "#c471ed"
-              : length === "long"
-              ? "#f64f59"
-              : ""
+              : "#12c2e9"
           }`,
-          "transparent",
+          `${
+            (length === "none" || length === "dead")
+            ? "transparent"
+            : (length === "short" || length === "chilled")
+            ? "transparent"
+            : "#c471ed"
+          }`,
+          `${
+            (length === "none" || length === "dead")
+            ? "transparent"
+            : (length === "short" || length === "chilled")
+            ? "transparent"
+            : (length === "medium" || length === "buzzing")
+            ? "transparent"
+            : "#f64f59"
+          }`
         ]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
-        locations={[startPos, endPos]}
+        locations={[0, 0.33, 0.7]}
       />
     </View>
   );

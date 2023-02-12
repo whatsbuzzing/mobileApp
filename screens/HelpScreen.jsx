@@ -1,11 +1,21 @@
-import { View, Text, TouchableHighlight, ScrollView } from "react-native";
+import { View, Text, TouchableHighlight, ScrollView, Linking, Alert } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
-import ActivityIcon from "../components/ActivityIcon";
-import LengthIcon from "../components/LengthIcon";
 
 const HelpScreen = () => {
+
+  const openUrl = async (url) => {
+    const isSupported = await Linking.canOpenURL(url);
+    if(isSupported){
+      await Linking.openURL(url)
+    } else {
+      Alert.alert(`Don't know how to open this url: ${url}`)
+    }
+  }
+
+  const instagramUrl = "https://www.instagram.com/whatsbuzzingapp"
+
   const navigation = useNavigation();
   return (
     <SafeAreaView className="flex-1 bg-veryDark">
@@ -40,15 +50,27 @@ const HelpScreen = () => {
             there are three methods that you can use to get into contact with us. you can either email us at our support or information desks, or get in touch with us over on instagram:
             </Text>
             <View className="space-y-[4px]">
-            <Text className="text-dark1 text-sm text-justify font-bold">
-            support@whatsbuzzing.app
-            </Text>
-            <Text className="text-dark1 text-sm text-justify font-bold">
-            info@whatsbuzzing.app
-            </Text>
-            <Text className="text-dark1 text-sm text-justify font-bold">
-            instagram.com/whatsbuzzingapp
-            </Text>
+            <TouchableHighlight onPress={() => {
+                Linking.openURL(`mailto:support@whatsbuzzing.app`)
+              }}>
+              <Text className="text-dark1 text-sm text-justify font-bold">
+              support@whatsbuzzing.app
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {
+                Linking.openURL(`mailto:info@whatsbuzzing.app`)
+              }}>
+              <Text className="text-dark1 text-sm text-justify font-bold">
+              info@whatsbuzzing.app
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight onPress={() => {
+                openUrl(instagramUrl)
+              }}>
+              <Text className="text-dark1 text-sm text-justify font-bold">
+              instagram.com/whatsbuzzingapp
+              </Text>
+            </TouchableHighlight>
             </View>
             <Text className="text-dark1 text-sm text-justify">
             we highly suggest you follow us on instagram, where we offer live support and keep you updated with any changes to the app. we'll also do some cool stuff with rewards and show you live updates from the streets of stellies (and more soon).
