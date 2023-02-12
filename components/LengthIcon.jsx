@@ -3,12 +3,10 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
 const LengthIcon = (props) => {
-  const { length, size } = props;
+  const { length } = props;
   return (
     <View
-      className={`rounded-full ${
-        length === "none" ? "border-[1px] border-solid border-dark2" : ""
-      } ${size === "small" ? "h-1" : "h-2"}`}
+      className={`rounded-full h-1 bg-dark3`}
     >
       <LinearGradient
         className="h-full w-full rounded-full"

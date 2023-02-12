@@ -50,7 +50,7 @@ const DataScreen = ({ route }) => {
         >
           <Text className="text-light text-xs">back</Text>
         </TouchableHighlight>
-        <Text className="absolute text-light font-bold text-4xl h-1/3 left-3 bottom-2">
+        <Text className="absolute text-light font-bold text-4xl h-1/3 left-3 bottom-5">
           {location}
         </Text>
       </View>
