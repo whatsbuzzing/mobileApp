@@ -20,8 +20,17 @@ const LengthIcon = (props) => {
             (length === "none" || length === "dead")
             ? "transparent"
             : (length === "short" || length === "chilled")
-            ? "transparent"
+            ? "#12c2e9"
             : "#c471ed"
+          }`,
+          `${
+            (length === "none" || length === "dead")
+            ? "transparent"
+            : (length === "short" || length === "chilled")
+            ? "transparent"
+            : (length === "medium" || length === "buzzing")
+            ? "#c471ed"
+            : "#f64f59"
           }`,
           `${
             (length === "none" || length === "dead")
@@ -35,7 +44,15 @@ const LengthIcon = (props) => {
         ]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 1, y: 0.5 }}
-        locations={[0, 0.33, 0.7]}
+        locations={
+          (length === "none" || length === "dead")
+          ? [0, 0.33, 0.66, 1]
+          : (length === "short" || length === "chilled")
+          ? [0, 0.30, 0.30, 0.30]
+          : (length === "medium" || length === "buzzing")
+          ? [0, 0.30, 0.60, 0.60]
+          : [0, 0.33, 0.66, 1]
+        }
       />
     </View>
   );

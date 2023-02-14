@@ -32,7 +32,7 @@ const DataCard = (props) => {
         <View className="flex-1 mx-2 my-1 justify-center">
           {/* Development: Turn off in production */}
           {/* {
-            (state !== "offline" || testing===true ) && (
+            (state !== "offline" || testing === true) && (
               <>
                 <Text className="text-light font-bold text-xl">{club}</Text>
                 {
@@ -62,13 +62,14 @@ const DataCard = (props) => {
             )
           }
           {
-            state === "offline" && testing===false && (
+            state === "offline" && testing === false && (
               <>
                 <Text className="text-light font-bold text-xl">{club}</Text>
                 <Text className=" text-dark1 font-medium">offline</Text>
               </>
             )
           } */}
+          {/* Production: Turn off in development */}
           {
             state !== "offline" && (
               <>
