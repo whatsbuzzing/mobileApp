@@ -111,14 +111,14 @@ const LocationScreen = () => {
           <Text className="text-light font-semibold my-3">Follow us on Instagram to be the first to know about it. See you guys soon.</Text>
           <Text className="text-light  font-semibold my-3">- WhatsBuzzing</Text>
         </View>
-        {locations.map((location, index) => (
+        {/* {locations.map((location, index) => (
           <LocationCard
             key={index}
             location={location.Location}
             state={location.State}
             testing={location.Testing}
           />
-        ))}
+        ))} */}
       </View>
     </SafeAreaView>
   );
