@@ -79,7 +79,7 @@ const LocationScreen = () => {
     <SafeAreaView className="bg-veryDark flex-1" onLayout={onLayoutRootView}>
       <View className=" px-10">
         <View className="flex-row items-center justify-between w-full mx-auto my-5">
-          <Text className="text-light font-semibold text-3xl">Where to?</Text>
+          <Text className="text-light font-semibold text-3xl">End of Beta</Text>
           <TouchableHighlight
             onPress={() => {
               navigation.navigate("Help");
@@ -88,14 +88,14 @@ const LocationScreen = () => {
             <Text className="text-dark1 text-sm font-medium">Help</Text>
           </TouchableHighlight>
         </View>
-        {
+        {/* {
           locations.map((location, index) =>
             (location.Location === "Stellenbosch" && location.State === "offline" &&
               (<View key={index}>
                 <Text className="text-firePink font-semibold my-3">{location.Location} is currently offline. Live updates are only available between the hours of 19:00 and 00:30 from Monday to Saturday.</Text>
               </View>)
             ))
-        }
+        } */}
         {/* Development: Turn off in production */}
         {/* {
           locations.map((location, index) =>
@@ -105,6 +105,12 @@ const LocationScreen = () => {
               </View>)
             ))
         } */}
+        <View>
+          <Text className="text-light font-semibold my-3">Thank you for testing our app :)</Text>
+          <Text className="text-light  font-semibold my-3">We're using the data from the test to build something really cool for all of our users and we plan on launching it as soon as possible.</Text>
+          <Text className="text-light font-semibold my-3">Follow us on Instagram and add your name to our mailing list on the website to be the first to know about it. See you guys soon.</Text>
+          <Text className="text-light  font-semibold my-3">- WhatsBuzzing</Text>
+        </View>
         {locations.map((location, index) => (
           <LocationCard
             key={index}

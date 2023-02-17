@@ -40,7 +40,7 @@ const HelpScreen = () => {
         <View className="space-y-[30px]">
           <Text className="text-dark1 text-2xl">when are we online?</Text>
           <Text className="text-dark1 text-sm text-justify">
-            although we have not officially launched yet, we plan to be online monday night to saturday night, from 19:00 to 00:30.
+            Our beta has officially ended. We plan on launching a new product for our users soon, so be sure to follow us on Instagram and add your name to our mailing list, found on our website, to be the first to know about it.
           </Text>
         </View>
         <View className="space-y-[30px]">
