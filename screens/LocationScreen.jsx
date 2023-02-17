@@ -108,7 +108,7 @@ const LocationScreen = () => {
         <View>
           <Text className="text-light font-semibold my-3">Thank you for testing our app :)</Text>
           <Text className="text-light  font-semibold my-3">We're using the data from the test to build something really cool for all of our users and we plan on launching it as soon as possible.</Text>
-          <Text className="text-light font-semibold my-3">Follow us on Instagram and add your name to our mailing list on the website to be the first to know about it. See you guys soon.</Text>
+          <Text className="text-light font-semibold my-3">Follow us on Instagram to be the first to know about it. See you guys soon.</Text>
           <Text className="text-light  font-semibold my-3">- WhatsBuzzing</Text>
         </View>
         {locations.map((location, index) => (
