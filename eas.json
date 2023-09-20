@@ -29,7 +29,7 @@
         "appleTeamId": "24M7FZ3329"
       },
       "android": {
-        "serviceAccountKeyPath" : "../../keys/pc-api-4741953861402187618-11-cc932cbf0942.json"
+        "serviceAccountKeyPath": "../../keys/pc-api-4741953861402187618-11-cc932cbf0942.json"
       }
     }
   }
