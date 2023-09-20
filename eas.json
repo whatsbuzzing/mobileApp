@@ -24,12 +24,12 @@
   "submit": {
     "production": {
       "ios": {
-        "appleId": "leejohnson19@icloud.com",
-        "ascAppId": "1664748100",
-        "appleTeamId": "24M7FZ3329"
+        "appleId": "APPLE_ID",
+        "ascAppId": "APP_ID",
+        "appleTeamId": "APPLE_TEAM_ID"
       },
       "android": {
-        "serviceAccountKeyPath": "../../keys/pc-api-4741953861402187618-11-cc932cbf0942.json"
+        "serviceAccountKeyPath": "SERVICE_ACCOUNT_KEY_PATH"
       }
     }
   }
